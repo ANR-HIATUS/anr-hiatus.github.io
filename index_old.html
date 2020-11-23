@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>HIATUS</title>
+
+
+
+</head>
+
+  <!-- Header -->
+  <header class="masthead" id="intro">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">Projet ANR HIATUS</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5 lang-en">Historical Image Analysis for Territory evolUtion Stories</h2>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5 lang-fr" style="display: none;">Historical Image Analysis for Territory evolUtion Stories</h2>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section section-padded">
+    <div class="container">
+      <div class="row text-center title">
+        <div class="col-lg-8 mx-auto mb-5">
+	  <h2 class="lang-en">Presentation</h2>
+	  <h2 class="lang-fr" style="display: none;">Présentation du projet</h2>
+      	</div>
+      </div>
+  </section>
+
+
+Le projet HIATUS vise à développer des méthodes automatiques innovantes pour exploiter et valoriser les campagnes de prises de vues aériennes et photogrammétriques anciennes afin de proposer des produits permettant la caractérisation les évolutions des territoires.<br>
+
+ <div>
+<!--   <img src="http://recherche.ign.fr/labos/matis/testadmin/Echanges/hiatus_strasbourg.gif" width="500" height="500"  alt="visu"/> -->
+<!-- <img src="http://recherche.ign.fr/labos/matis/testadmin/Echanges/hiatus_strasbourg.gif"> -->
+	 <img src="hiatus_strasbourg.gif">
+</div>
+Ces campagnes d’acquisition d’images aériennes ont en effet été opérées de manière régulière sur l’ensemble du territoire français depuis le milieu du XXème siècle. Ces clichés (argentiques jusqu’aux années 2000) ont fait l’objet d’un important travail de numérisation au cours de la dernière décennies et sont désormais disponibles sous forme numérique. En France, cela représente plus de 3 millions de clichés, consultables depuis le site <a href="https://remonterletemps.ign.fr">https://remonterletemps.ign.fr</a>.<br><br>
+Ces données aériennes d’archive constituent des séries temporelles longues, assez denses temporellement (généralement au moins une acquisition tous les 5 ans) et présentent une très haute résolution spatiale (généralement submétrique). De surcroît, ces images ont le plus souvent été acquises à des fins de restitution stéréoscopique, et donc dans des configurations permettant d’accéder à une information 3D (modèles numériques de surface). Par rapport aux données satellite d’archive, on dispose donc d’une source de données encore relativement inexploitée pouvant permettre l’étude des évolutions des territoires, des changements d’occupation des sols et des suivis environnementaux sur un assez long terme. <br><br>
+
+Leur utilisation dans des processus d’analyse automatiques reste toutefois complexe pour plusieurs raisons : <br>
+<ul>
+<li> D’une part, le géoréférencement fourni pour les clichés reste très approché (~100 m). Une remise en géométrie des images s’avère donc nécessaire pour pouvoir les orthorectifier et les mosaïquer, mais également pour pouvoir en déduire une information 3D (calcul automatique de modèle numérique de surface). Cette remise en géométrie implique la connaissance d’amers terrain d’appui, ce qui occasionne un travail de saisie qui s’est souvent avéré bloquant dans les études menées jusqu’à présent sur ces données.</li>
+<li> D’autre part, ces données présentent une forte hétérogénéité. En effet, ces différentes prises de vues n’ont pas été acquises avec les mêmes caractéristiques spectrales (images pouvant être panchromatiques, en couleurs naturelles, en infrarouge ou en infrarouge couleur), spatiales (résolution spatiale variant généralement selon la prise de vue entre 10 cm et 1 m), et géométriques (les configurations des prises de vues en termes de focale, de hauteur de vol et de recouvrement entre images ne sont pas identiques et sont plus ou moins propices à une bonne remise en géométrie et à bien retrouver l’information 3D). Les images peuvent par ailleurs être bruitées (principalement du fait de la numérisation). Enfin, au sein d’une même acquisition, les variations de la radiométrie peuvent être importantes (vignettage, hot-spot, voile atmosphérique).</li>
+<li> Enfin, aucune donnée de référence n’est associée à ces données anciennes, qu’il s’agisse d’amers terrain d’appui pour leur mise en géométrie ou de données sémantisées à peu près contemporaines des clichés pour entraîner des outils des classification / segmentation sémantique supervisés, et en particulier les outils modernes reposant sur l’apprentissage profond gourmand en données d’apprentissage.</li>
+</ul>
+<br><br>
+
+Le projet HIATUS propose de s’attaquer à ces différents verrous.<br>
+<ul>
+<li> Il s’agira de travailler à <b>l’automatisation de la production des jeux de données</b>: ortho-images et modèles numériques de surface. Cette tâche visera notamment à automatiser la remise en géométrie des images, ce qui comprendra en particulier la mise en place d’un processus automatique de détection d’amers terrain d’appui à partir de données de référence plus récentes, une optimisation des paramètres d’aérotriangulation, une meilleure automatisation du processus d’orientation interne. Un travail sera aussi mené sur l’égalisation radiométrique des images de manière à obtenir des mosaïques d’ortho-images homogènes radiométriquement (corrections des hétérogénéités dues au vignettage, au hot-spot notamment).</li>
+<li> Des processus spécifiques seront mis en place pour <b>analyser les séries temporelles (d’images et de modèles numériques de surface) </b> créées à partir de ces données, en particulier pour y détecter et y caractériser les changements. Ces changements peuvent en effet progressifs (liés à une évolution naturelle comme la densification d’un couvert forestier) ou abrupts (souvent liés à une perturbation naturelle, e.g. tempête, ou anthropique, e.g. constructions), et peuvent affecter les propriétés géométriques et sémantiques des objets. Il s’agira ici de lever les verrous liés aux fortes hétérogénéités spectrales, spatiales, géométriques et radiométriques au sein de ces séries temporelles historiques. Les approches envisagées seront non supervisées .Il s’agira d’une part de mettre au point d’une méthode de clustering intégrant des caractéristiques contextuelles dans un processus classique d’analyse de séries temporelle, de manière à se rendre robuste au bruit et aux hétérogénéité de la série temporelle. D’autre part, une méthode de clustering collaboratif contraint sera mise en place de manière à intégrer des mécanismes d’intégration incrémentale et interactive de contraintes thématiques.</li>
+<li> La <b>segmentation sémantique des différents millésimes de la série temporelle </b> sera également étudiée. Afin de pallier à l’absence de données d’apprentissage sémantisées correspondant aux différents millésimes, le travail portera spécifiquement sur le <b>transfert d’apprentissage</b>. On visera à la mise en place de méthodes de transfert d’apprentissage permettant d’intégrer différentes contraintes issues de la structure de la série temporelle qui pourront être spatio-temporelles (prenant en compte le fait que les données de départ et d’arrivée sont ici superposables et bénéficiant des méthodes de détection de changement susmentionnés pour pénaliser les zones de changement), thématiques (sur la possibilité ou non de transition entre certaines classes) et liées à la qualité des données (notamment pour les informations 3D).</li>
+</ul>
+
+Enfin, la valorisation des différents résultats du projet se fera, outre par des communications scientifiques, par le développement de démonstrateurs  en ligne pour la visualisation des données et produits du projet. Un outil de visualisation en ligne des jeux de données (2D et 3D) du projet sera ainsi développé, avec la possibilité de naviguer dans le temps. Par ailleurs, différents cas d’étude thématiques précis pour lesquels des résultats issus du projet seraient utiles seront recensés, à la suite de quoi, des cartes d’occupation du sol répondant à ces besoins seront produites et mises en ligne via un démonstrateur. Enfin, un outil en ligne interactif dédié  à la détection de changement sera produit. Il permettra via une interface web à un utilisateur de contrôler un outil de clustering par différentes contraintes (contraintes thématique, nombre de cluster, focus sur des objets particuliers…).
+
+
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      <p> ... </p>
+    </div>
+  </footer>
+
+
+
+
+</b></body></html>
