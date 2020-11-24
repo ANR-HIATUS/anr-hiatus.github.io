@@ -13,11 +13,11 @@ document.write("\
 function ecrire_liste_pour_menu_et_bandeau_en(){
 document.write("\
 					<li><a href='index_en.html'>Home</a></li>\
-					<li><a href='presentation_en.html'>Presentation</a></li>\
-					<li><a href='consortium_en.html'>Team</a></li>\
-					<li><a href='publications_en.html'>Publications</a></li>\
-					<li><a href='news_en.html'>News</a></li>\
-					<li><a href='contact_en.html'>Contact</a></li>\
+					<li><a href='presentation.html'>Presentation</a></li>\
+					<li><a href='consortium.html'>Team</a></li>\
+					<li><a href='publications.html'>Publications</a></li>\
+					<li><a href='actualites.html'>News</a></li>\
+					<li><a href='contact.html'>Contact</a></li>\
 ");
 }
 
