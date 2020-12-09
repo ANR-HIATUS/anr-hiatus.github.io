@@ -7,8 +7,8 @@ document.write("\
 					<div class='moduletable'>\
  						<div class='bannergroup'>\
 							<div class='banneritem'>\
-								<a href='https://www.anr-hiatus.github.io' target='_blank' rel='noopener noreferrer' title='HIATUS'>\
-									<img src='./logos/hiatus.png' height='150' alt='HIATUS'>\
+								<a href='https://anr-hiatus.github.io' target='_blank' rel='noopener noreferrer' title='HIATUS'>\
+									<img src='./logos/hiatus.png' height='125' alt='HIATUS'>\
 								</a>\
 								<div class='clr'></div>\
 							</div>\
@@ -31,8 +31,8 @@ document.write("\
 					<div class='moduletable'>\
 						<div class='bannergroup'>\
 							<div class='banneritem'>\
-								<a href='https://www.anr.fr' target='_blank' rel='noopener noreferrer' title='ANR'>\
-									<img src='./fichiers/rien.jpg' alt=''>\
+								<a href='https://anr-hiatus.github.io' target='_blank' rel='noopener noreferrer' title='HIATUS'>\
+									<img src='./logos/hiatus.png' height='125' alt='HIATUS'>\
 								</a>\
 									<div class='clr'></div>\
 							</div>\
