@@ -8,7 +8,7 @@ document.write("\
  						<div class='bannergroup'>\
 							<div class='banneritem'>\
 								<a href='https://www.anr-hiatus.github.io' target='_blank' rel='noopener noreferrer' title='HIATUS'>\
-									<img src='./fichiers/hiatus.png' alt=''>\
+									<img src='./logos/hiatus.png' alt=''>\
 								</a>\
 								<div class='clr'></div>\
 							</div>\
