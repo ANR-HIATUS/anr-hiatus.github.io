@@ -4,7 +4,7 @@ document.write("\
 					<li><a href='presentation.html'>Pr\u00e9sentation</a></li>\
 					<li><a href='consortium.html'>Consortium</a></li>\
 					<li><a href='publications.html'>Publications</a></li>\
-					<li><a href='actualites.html'>Actualit\u00e9s</a></li>\
+					<li><a href='actualites.html'>Ru00e9sultats</a></li>\
 					<li><a href='contact.html'>Contact</a></li>\
 ");
 }
